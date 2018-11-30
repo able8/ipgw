@@ -21,7 +21,6 @@
 	"https://ipns.co/:hash",
 	"https://ipfs.netw0rk.io/ipfs/:hash",
 	"https://gateway.swedneck.xyz/ipfs/:hash",
-	"https://gateway.originprotocol.com/ipfs/:hash",
 	"https://ipfs.dapps.earth/ipfs/:hash",
 	"https://gateway.pinata.cloud/ipfs/:hash",
 	"https://ipfs.doolta.com/ipfs/:hash",
