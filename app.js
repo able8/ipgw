@@ -5,8 +5,7 @@ const $results = document.querySelector('#results')
 
 function returnHtmlLink(gateway) {
   let gatewayTitle = gateway.split(hashToTest)[0]
-  return '<a title="' + gatewayTitle + '" href="' + gateway '" >' + gateway + '</a>';
-  return '<a title="' + gatewayTitle + '" href="' + gateway + '">' + gateway + '</a>';
+  return '<a title="' + gatewayTitle + '" href="' + gateway + '" target="_blank">' + gateway + '</a>'
 }
 
 function addNode (gateway, online, title) {
