@@ -1,23 +1,25 @@
-const hashToTest = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a'
-const hashString = 'Hello from IPFS Gateway Checker'
+// const hashToTest = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a'
+const hashToTest = 'QmTmN8KdevmwT2kGivpmzBfvhM2hUuhg8XaDFWiP5S8R7k'
+const hashString = '<h1 align="center">It Works!</h1><h3 align="center">from IPFS Gateway Checker</h3>'
 
 const $results = document.querySelector('#results')
 
 function returnHtmlLink(gateway) {
   let gatewayTitle = gateway.split(hashToTest)[0]
-  return '<a title="' + gatewayTitle + '" href="' + gateway + '" target="_blank">' + gateway + '</a>'
+  return '<a title="' + gatewayTitle + '" href="' + gateway + '" target="_blank">' + gatewayTitle + '</a>'
 }
 
 function addNode (gateway, online, title) {
 	const para = document.createElement('div')
-	let node
+  let node
+  let gatewayTitle = gateway.split(hashToTest)[0]
 	if (online) {
 		node = document.createElement('strong')
     // node.innerText = '✅ - Online  - ' + gateway
-    node.innerHTML = '✅ - Online  - ' + returnHtmlLink(gateway)
+    node.innerHTML = '✅ Online  : ' + returnHtmlLink(gateway) + ' ✅'
 	} else {
 		node = document.createElement('div')
-		node.innerText = '❌ - Offline - ' + gateway
+		node.innerText = '❌ Offline : ' + gatewayTitle
 	}
 	node.setAttribute('title', title)
 	para.appendChild(node)
